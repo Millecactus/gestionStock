@@ -1,11 +1,12 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -14,4 +15,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="LigneCommandeFournisseur")
 public class LigneCommandeFournisseur extends AbstractEntity{
+
+    @ManyToOne
+    @JoinColumn(name="idCommandeFournisseur")//joincolumn car il recoit une clé étrangère
+    private List<CommandeFournisseur> commandeFournisseur;
 }

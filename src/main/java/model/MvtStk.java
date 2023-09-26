@@ -14,4 +14,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @Table(name="MvtStk")
 public class MvtStk extends AbstractEntity{
+
+    //FIXME
+    private String lol;
 }

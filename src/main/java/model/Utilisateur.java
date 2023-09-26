@@ -14,4 +14,6 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="Utilisateur")
 public class Utilisateur extends AbstractEntity{
+    //FIXME
+    private String lol;
 }
